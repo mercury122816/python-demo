@@ -8,6 +8,8 @@ RUN mkdir -p ${source_path}
 #Set up source
 COPY ./  ${source_path}
 
+RUN chmod +x ${source_path}/demo.py
+
 #Set up working directory
 WORKDIR ${source_path}
 ENTRYPOINT  ["python"]
